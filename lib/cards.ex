@@ -24,11 +24,13 @@ defmodule Cards do
     for suit <- suits, value <- values, do: "#{value} of #{suit}"
 
     # A list of lists
-    # for value <- values do
+    # cards = for value <- values do
     #   for suit <- suits do
     #     "#{value} of #{suit}"
     #   end
     # end
+
+    # List.flatten(cards)
   end
 
   def shuffle(deck) do
