@@ -73,4 +73,11 @@ defmodule Cards do
       {:error, _reason} -> {:error, "File not found"}
     end
   end
+
+  # Not using pipe operator
+  def old_create_hand(handsize) do
+    deck = create_deck()
+    shuffled_deck = shuffle(deck)
+    deal(shuffled_deck, handsize)
+  end
 end
