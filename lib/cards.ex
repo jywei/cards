@@ -52,7 +52,7 @@ defmodule Cards do
   @doc """
     Returns a tuple with the first element being the hand and the second element being the remaining deck.
 
-  ## Examples
+    ## Examples
 
       iex> deck = Cards.create_deck()
       iex> {hand, remaining} = Cards.deal(deck, 5)
