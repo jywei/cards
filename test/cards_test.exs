@@ -32,4 +32,9 @@ defmodule CardsTest do
     assert length(hand) == 10
     assert length(remaining) == 42
   end
+
+  test "create a hand of cards" do
+    deck = Cards.create_hand(5)
+    assert length(deck) == 5
+  end
 end
