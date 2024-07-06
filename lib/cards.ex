@@ -20,9 +20,6 @@ defmodule Cards do
     values = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"]
     suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
 
-    # comprehension
-    for suit <- suits, value <- values, do: "#{value} of #{suit}"
-
     # A list of lists
     # cards = for value <- values do
     #   for suit <- suits do
@@ -31,6 +28,9 @@ defmodule Cards do
     # end
 
     # List.flatten(cards)
+
+    # comprehension
+    for suit <- suits, value <- values, do: "#{value} of #{suit}"
   end
 
   def shuffle(deck) do
