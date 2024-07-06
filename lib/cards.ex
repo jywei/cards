@@ -1,6 +1,6 @@
 defmodule Cards do
   @moduledoc """
-  Documentation for `Cards`.
+    Provides methods for creating and manipulating a deck of cards.
   """
 
   @doc """
@@ -16,6 +16,9 @@ defmodule Cards do
     :world
   end
 
+  @doc """
+    Returns a list of strings representing a deck of cards.
+  """
   def create_deck do
     values = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"]
     suits = ["Hearts", "Diamonds", "Clubs", "Spades"]

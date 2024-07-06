@@ -18,6 +18,7 @@ end
 ```
 iex -S mix
 mix deps.get
+mix docs
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
