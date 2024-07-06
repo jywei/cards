@@ -66,4 +66,11 @@ defmodule Cards do
       _ -> {:error, "File not found"}
     end
   end
+
+  def old_load(filename) do
+    case File.read(filename) do
+      {:ok, binary} -> :erlang.binary_to_term(binary)
+      {:error, reason} -> {:error, reason}
+    end
+  end
 end
