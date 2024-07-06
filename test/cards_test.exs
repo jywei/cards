@@ -17,6 +17,7 @@ defmodule CardsTest do
     deck = Cards.create_deck()
     shuffled_deck = Cards.shuffle(deck)
     refute deck == shuffled_deck
+    # assert deck != shuffled_deck
   end
 
   test "deals a hand of cards" do
@@ -36,5 +37,9 @@ defmodule CardsTest do
   test "create a hand of cards" do
     deck = Cards.create_hand(5)
     assert length(deck) == 5
+  end
+
+  test "create_deck makes a deck of 52 cards" do
+    assert length(Cards.create_deck()) == 52
   end
 end
