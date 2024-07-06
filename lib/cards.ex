@@ -86,4 +86,15 @@ defmodule Cards do
     shuffled_deck = shuffle(deck)
     deal(shuffled_deck, handsize)
   end
+
+  # Using pipe operator
+  def create_hand(handsize) do
+    # Cards.create_deck
+    # |> Cards.shuffle
+    # |> Cards.deal(handsize)
+
+    create_deck()
+    |> shuffle()
+    |> deal(handsize)
+  end
 end
