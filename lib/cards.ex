@@ -49,6 +49,9 @@ defmodule Cards do
   #   Enum.split(deck, hand_size)
   # end
 
+  @doc """
+    Returns a tuple with the first element being the hand and the second element being the remaining deck.
+  """
   def deal(deck, n) do
     {hand, remaining} = Enum.split(deck, n)
     {hand, remaining}
