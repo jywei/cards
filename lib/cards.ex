@@ -40,4 +40,9 @@ defmodule Cards do
   def contains?(deck, card) do
     Enum.member?(deck, card)
   end
+
+  def deal(deck, n) do
+    {hand, remaining} = Enum.split(deck, n)
+    {hand, remaining}
+  end
 end
